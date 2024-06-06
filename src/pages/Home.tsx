@@ -17,8 +17,8 @@ import {
 } from "../redux/slices/creamSlice";
 
 //assets
-import background from "../../public/icons/bg.png";
-import empty from "../../public/icons/empty.png";
+import background from "../../public/icons/bg.jpg";
+import empty from "../../public/icons/empty.jpeg";
 
 //components
 import CreamBlock from "../components/CreamBlock";
@@ -150,7 +150,12 @@ const Home: React.FC = () => {
         {status === "error" ? (
           <div className="text-center">
             <h1 className="text-4xl font-semibold">Error</h1>
-            <img className="w-24 mx-auto my-4" src={empty} alt="Sad Icon" />
+            <img
+              className="w-24 mx-auto my-4"
+              loading="lazy"
+              src={empty}
+              alt="Sad Icon"
+            />
             <p>No items found here</p>
           </div>
         ) : (
