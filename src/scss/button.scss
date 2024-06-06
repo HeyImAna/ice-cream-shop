@@ -1,0 +1,112 @@
+@use "../scss/functions" as u;
+
+.mainButton {
+  z-index: 1;
+  position: absolute;
+  bottom: 2.5rem;
+  left: 25%;
+  background-color: rgb(196 181 253);
+  font-weight: 600;
+  padding: 1.5rem;
+  width: calc(50% - u.rem(1));
+  border: 2px solid #1f2937;
+  border-radius: 1.5rem;
+  box-shadow: 8px 10px 0px -4px rgb(31, 41, 55);
+  cursor: pointer;
+  display: block;
+  text-decoration: none;
+  overflow: hidden;
+
+  &:hover {
+    .wave {
+      top: -90px;
+    }
+  }
+
+  &:active {
+    background-color: #fff8ef;
+    box-shadow: 6px 8px 0px -4px rgb(31, 41, 55);
+  }
+
+  span {
+    position: relative;
+    z-index: 1;
+  }
+
+  .wave {
+    z-index: 0;
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    left: 0;
+    top: -200px;
+    transition: 0.4s;
+
+    &::before,
+    &::after {
+      width: 200%;
+      height: 200%;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -75%);
+    }
+
+    &::before {
+      border-radius: 45%;
+      animation: wave 5s linear infinite;
+    }
+
+    &::after {
+      border-radius: 40%;
+      background-color: #fff8ef;
+      animation: wave 10s linear infinite;
+    }
+
+    @keyframes wave {
+      0% {
+        transform: translate(-50%, -75%) rotate(360deg);
+      }
+
+      100% {
+        transform: translate(-50%, -75%) rotate(0deg);
+      }
+    }
+  }
+}
+
+.cart {
+  position: relative;
+  background-color: rgb(196 181 253);
+  width: 100%;
+  height: 5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  top: 0;
+  left: 0;
+
+  &:active {
+    background-color: #fff8ef;
+    box-shadow: 6px 8px 0px -4px rgb(31, 41, 55);
+  }
+
+  .wave {
+    width: 300px;
+    left: 200px;
+  }
+}
+
+.details {
+  position: absolute;
+  width: 100%;
+  height: 5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  bottom: 0;
+  left: 0;
+}

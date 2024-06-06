@@ -1,0 +1,27 @@
+.pagination {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+
+  a {
+    display: inline-block;
+    border: 0.125rem solid #1f2937;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 2.5rem;
+    height: 2.5rem;
+    text-align: center;
+    padding-top: 0.4rem;
+    &:hover {
+      background-color: rgb(254 249 195);
+    }
+  }
+
+  :global {
+    .selected {
+      a {
+        background-color: rgb(254 249 195);
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@forward "detailsLayout";
+@forward "button";
+@forward "functions";
+
+@use "./functions" as u;
+
+.categories {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+.categories::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
