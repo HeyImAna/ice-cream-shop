@@ -1,5 +1,5 @@
 import React from "react";
-import empty from "../../../public/icons/empty.jpeg";
+import empty from "../../../public/icons/empty.png";
 
 const CartEmpty: React.FC = () => {
   return (

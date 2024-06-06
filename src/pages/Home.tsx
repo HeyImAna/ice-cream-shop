@@ -18,7 +18,7 @@ import {
 
 //assets
 import background from "../../public/icons/bg.jpg";
-import empty from "../../public/icons/empty.jpeg";
+import empty from "../../public/icons/empty.png";
 
 //components
 import CreamBlock from "../components/CreamBlock";
